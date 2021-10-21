@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
 export const Todo = () => {
-	let [counter, setCounter] = useState(0);
+	const [counter, setCounter] = useState(0);
 	const [tasks, setTasks] = useState("");
 	const [list, setList] = useState([]);
 
 	const deleteTask = indexDelete => {
-		let resultado = list.filter((tasks, index) => index != indexDelete);
+		const resultado = list.filter((tasks, index) => index != indexDelete);
 		setList(resultado);
 		setCounter(counter - 1);
 	};
@@ -32,7 +32,7 @@ export const Todo = () => {
 						type="text"
 						className="form-control"
 						id="todo"
-						placeholder="Agregar Tarea?"
+						placeholder="Agregar Tarea!"
 						onChange={e => agregar(e.target.value)}
 						onKeyPress={agregarLista}
 						value={tasks}></input>
