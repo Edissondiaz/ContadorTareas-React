@@ -32,7 +32,7 @@ export const Todo = () => {
 						type="text"
 						className="form-control"
 						id="todo"
-						placeholder="Agregar Tarea!"
+						placeholder="Agregar Items!"
 						onChange={e => agregar(e.target.value)}
 						onKeyPress={agregarLista}
 						value={tasks}></input>
@@ -56,8 +56,8 @@ export const Todo = () => {
 					<small>
 						{"" +
 							(counter == 0
-								? "sin tareas, Agregar tarea"
-								: counter + " Tarea agregada")}
+								? "sin item, Agregar item"
+								: counter + " Item agregado")}
 					</small>
 				</li>
 			</ul>
